@@ -1,9 +1,9 @@
 ; things to customize
 (declare 'atstrings t)
 
-(= this-site*    "My Forum"
-   site-url*     "http://news.yourdomain.com/"
-   parent-url*   "http://www.yourdomain.com"
+(= this-site*    "Dataprat"
+   site-url*     "http://prat.blankoslo.no/"
+   parent-url*   "http://www.blankoslo.no"
    favicon-url*  ""
    site-desc*    "What this site is about."               ; for rss feed
    site-color*   (color 180 180 180)

@@ -1,11 +1,11 @@
 ; things to customize
 (declare 'atstrings t)
 
-(= this-site*    "Dataprat"
+(= this-site*    "EDB-prat"
    site-url*     "http://prat.blankoslo.no/"
    parent-url*   "http://www.blankoslo.no"
    favicon-url*  ""
-   site-desc*    "What this site is about."               ; for rss feed
+   site-desc*    "Generell norsk EDB-prat."               ; for rss feed
    site-color*   (color 180 180 180)
    border-color* (color 180 180 180)
    prefer-url*   t)

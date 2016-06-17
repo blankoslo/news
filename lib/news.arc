@@ -486,7 +486,7 @@ a:visited { color:#828282; text-decoration:none; }
 .subtext { font-family:Verdana; font-size:  7pt; color:#828282; }
 .yclinks { font-family:Verdana; font-size:  8pt; color:#828282; }
 .pagetop { font-family:Verdana; font-size: 10pt; color:#ffffff; }
-.pagetop a:link, a:visited  { color:#ffffff; }
+.pagetop a:link, .pagetop a:visited  { color:#ffffff; }
 
 .comhead { font-family:Verdana; font-size:  8pt; color:#828282; }
 .comment { font-family:Verdana; font-size:  9pt; }

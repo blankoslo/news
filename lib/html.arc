@@ -242,9 +242,11 @@
                  `((pr ,@body))))
 
   (mac td       body         `(tag td ,@(pratoms body)))
+  (mac th       body         `(tag th ,@(pratoms body)))
   (mac trtd     body         `(tr (td ,@(pratoms body))))
   (mac tdr      body         `(tag (td align 'right) ,@(pratoms body)))
   (mac tdcolor  (col . body) `(tag (td bgcolor ,col) ,@(pratoms body)))
+  (mac thcolor  (col . body) `(tag (th bgcolor ,col) ,@(pratoms body)))
 )
 
 (mac row args

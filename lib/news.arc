@@ -1,13 +1,13 @@
 ; things to customize
 (declare 'atstrings t)
 
-(= this-site*    "EDB-prat"
+(= this-site*    "dataprat"
    site-url*     "http://prat.blankoslo.no/"
    parent-url*   "http://www.blankoslo.no"
    favicon-url*  ""
-   site-desc*    "Generell norsk EDB-prat."               ; for rss feed
-   site-color*   (color 180 180 180)
-   border-color* (color 180 180 180)
+   site-desc*    "Generell norsk dataprat."               ; for rss feed
+   site-color*   (color 248 72 94)
+   border-color* (color 255 255 255)
    prefer-url*   t)
 
 ; these settings might improve performance when you need it
@@ -383,7 +383,7 @@
 
 ; Page Layout
 
-(= up-url* "grayarrow.gif" down-url* "graydown.gif" logo-url* "arc.png")
+(= up-url* "grayarrow.gif" down-url* "graydown.gif" logo-url* "b.svg")
 
 (defopr favicon.ico req favicon-url*)
 
@@ -467,6 +467,7 @@
   (pr "
 body  { font-family:Verdana; font-size:10pt; color:#828282; }
 td    { font-family:Verdana; font-size:10pt; color:#828282; }
+th    { font-family:Verdana; font-size:10pt; color:#ffffff; background-color:#f8485e; }
 
 .admin td   { font-family:Verdana; font-size:8.5pt; color:#000000; }
 .subtext td { font-family:Verdana; font-size:  7pt; color:#828282; }
@@ -484,14 +485,15 @@ a:visited { color:#828282; text-decoration:none; }
 .adtitle { font-family:Verdana; font-size:  9pt; color:#828282; }
 .subtext { font-family:Verdana; font-size:  7pt; color:#828282; }
 .yclinks { font-family:Verdana; font-size:  8pt; color:#828282; }
-.pagetop { font-family:Verdana; font-size: 10pt; color:#222222; }
+.pagetop { font-family:Verdana; font-size: 10pt; color:#ffffff; }
+.pagetop a:link, a:visited  { color:#ffffff; }
+
 .comhead { font-family:Verdana; font-size:  8pt; color:#828282; }
 .comment { font-family:Verdana; font-size:  9pt; }
 .dead    { font-family:Verdana; font-size:  9pt; color:#dddddd; }
 
 .comment a:link, .comment a:visited { text-decoration:underline;}
 .dead a:link, .dead a:visited { color:#dddddd; }
-.pagetop a:visited { color:#000000;}
 .topsel a:link, .topsel a:visited { color:#ffffff; }
 
 .subtext a:link, .subtext a:visited { color:#828282; }
@@ -559,7 +561,7 @@ function vote(node) {
 
 ; Page top
 
-(= sand (color 246 246 239) textgray (gray 130))
+(= sand (color 245 246 245) textgray (gray 130))
 
 (def main-color (user)
   (aif (and user (uvar user topcolor))
@@ -568,7 +570,7 @@ function vote(node) {
 
 (def pagetop (switch lid label (o title) (o user) (o whence))
 ; (tr (tdcolor black (vspace 5)))
-  (tr (tdcolor (main-color user)
+  (tr (th
         (tag (table border 0 cellpadding 0 cellspacing 0 width "100%"
                     style "padding:2px")
           (tr (gen-logo)
@@ -2610,5 +2612,3 @@ first asterisk isn't whitespace.
     (tab
       (each c (dedup (map downcase (trues [uvar _ topcolor] (users))))
         (tr (td c) (tdcolor (hex>color c) (hspace 30)))))))
-
-

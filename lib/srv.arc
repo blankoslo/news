@@ -118,6 +118,7 @@
            "jpg"  "image/jpg"
            "jpeg" "image/jpg"
            "png"  "image/png"
+           "svg"  "image/svg+xml"
            "css"  "text/plain"
            "js"   "text/javascript"
            "txt"  "text/plain"
@@ -714,4 +715,3 @@ stdout, returns a url to redirect requests to after processing."
 ; Idea: make form fields that know their value type because of
 ; gensymed names, and so the receiving fn gets args that are not
 ; strings but parsed values.
-

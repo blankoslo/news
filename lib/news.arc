@@ -4,7 +4,7 @@
 (= this-site*    "dataprat"
    site-url*     "http://prat.blankoslo.no/"
    parent-url*   "http://www.blankoslo.no"
-   favicon-url*  ""
+   favicon-url*  "/fav.ico"
    site-desc*    "Generell norsk dataprat."               ; for rss feed
    site-color*   (color 248 72 94)
    border-color* (color 255 255 255)

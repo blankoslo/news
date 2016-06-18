@@ -119,6 +119,7 @@
            "jpeg" "image/jpg"
            "png"  "image/png"
            "svg"  "image/svg+xml"
+           "ico"  "image/x-icon"
            "css"  "text/plain"
            "js"   "text/javascript"
            "txt"  "text/plain"

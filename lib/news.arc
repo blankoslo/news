@@ -2,10 +2,11 @@
 (declare 'atstrings t)
 
 (= this-site*    "dataprat"
-   site-url*     "http://prat.blankoslo.no/"
+   site-url*     "https://prat.blankoslo.no/"
    parent-url*   "http://www.blankoslo.no"
    favicon-url*  "/fav.ico"
    site-desc*    "Generell norsk dataprat."               ; for rss feed
+   slack-url*    (getenv "SLACK_POST_URL")
    site-color*   (color 248 72 94)
    border-color* (color 255 255 255)
    prefer-url*   t)
@@ -1584,6 +1585,9 @@ ga('send', 'pageview');
   (let s (inst 'item 'type 'story 'id (new-item-id)
                      'url url 'title title 'text text 'by user 'ip ip)
     (save-item s)
+    (if slack-url*
+      (let payload (+ "{\"text\": \"<" site-url* "item?id=" s!id "|" title "> postet av " user " \"}")
+        (post-url slack-url* (list "payload" payload))))
     (= (items* s!id) s)
     (unless (blank url) (register-url s url))
     (push s stories*)

@@ -874,6 +874,7 @@
 (xdef stdout current-output-port)  ; should be a vars
 (xdef stdin  current-input-port)
 (xdef stderr current-error-port)
+(xdef getenv getenv)
 
 (xdef call-w/stdout
       (lambda (port thunk)

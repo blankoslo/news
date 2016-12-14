@@ -2,8 +2,8 @@
 (declare 'atstrings t)
 
 (= this-site*    "dataprat"
-   site-url*     "https://prat.blankoslo.no/"
-   parent-url*   "http://www.blankoslo.no"
+   site-url*     "https://prat.blank.no/"
+   parent-url*   "https://www.blank.no"
    favicon-url*  "/fav.ico"
    site-desc*    "Generell norsk dataprat."               ; for rss feed
    slack-url*    (getenv "SLACK_POST_URL")
